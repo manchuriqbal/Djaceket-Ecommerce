@@ -23,7 +23,7 @@
               </figure>
               <h3 class="is-size-4">{{ product.name }}</h3>
               <p class="is-size-6 has-text-grey">${{ product.price }}</p>
-              View Product
+              <router-link :to="product.get_absolute_url" class="button is-dark mt-4">View Details</router-link>
           </div>
         </div>
 
