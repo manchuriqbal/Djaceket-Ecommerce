@@ -56,10 +56,13 @@ export default {
                 .get(`/api/v1/product/${category_slug}/${product_slug}`)
                 .then(response => {
                     this.product = response.data
+                
+                    document.title = this.product.name + '| Djackets'
                 })
                 .catch(error => {
                     console.log(error)
                 })
+                
 
             this.$store.commit('showLoadingBar', false)
         },

@@ -44,11 +44,13 @@ export default {
     }
   },
   mounted() {
-    this.getLeatestProducts()
+    this.getLeatestProducts(),
+    document.title = 'Home | Djackets'
   },
   methods: {
-    getLeatestProducts () {
-      axios
+    async getLeatestProducts () {
+      this.$store.commit('showLoadingBar', true)
+      await axios
         .get('/api/v1/leatest-products/')
         .then(response => {
           this.LeatestProducts = response.data
@@ -56,6 +58,7 @@ export default {
         .catch(error => {
           console.group(error)
         })
+        this.$store.commit('showLoadingBar', false)
     }
   },
 }
