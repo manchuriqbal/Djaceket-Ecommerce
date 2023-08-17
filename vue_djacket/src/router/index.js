@@ -3,6 +3,8 @@ import HomeView from '../views/HomeView.vue'
 import Product from '../views/Product.vue'
 import About from '../views/AboutView.vue'
 import Category from '../views/Category.vue'
+import Search from '../views/Search.vue'
+
 
 const routes = [
   {
@@ -14,6 +16,11 @@ const routes = [
     path: '/:category_slug/:product_slug',
     name: 'Prodcut',
     component: Product
+  },
+  {
+    path: '/search',
+    name: 'Search',
+    component: Search
   },
   {
     path: '/about',
