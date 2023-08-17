@@ -29,7 +29,11 @@ export default createStore({
       }
 
       localStorage.setItem('cart', JSON.stringify(state.cart))
+    },
+    showLoadingBar(state, status) {
+      state.isLoading = status;
     }
+
   },
   actions: {
   },
