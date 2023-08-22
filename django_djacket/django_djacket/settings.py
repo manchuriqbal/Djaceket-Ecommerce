@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'djoser',
 
-    'product'
+    'product',
+    'order'
 ]
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:8080",

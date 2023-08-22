@@ -11,6 +11,7 @@ import SignUp from '../views/SignUp.vue'
 import LogIn from '../views/LogIn.vue'
 import MyAccount from '../views/MyAccount.vue'
 import Checkout from '../views/Checkout.vue'
+import Success from '../views/Success.vue'
 
 
 const routes = [
@@ -53,6 +54,11 @@ const routes = [
     path: '/log-in',
     name: 'LogIn',
     component: LogIn
+  },
+  {
+    path: '/cart/success',
+    name: 'Success',
+    component: Success
   },
   {
     path: '/my-account',
